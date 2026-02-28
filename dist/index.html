@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gulf Shield</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="/main-11ed11399ee8c319.css" integrity="sha384-W3D9fxYtAgEoky/3YUyK0uD3UYMId1RzO/VEGJIBfYeMdTVKO7746yAbU+KbaO3G"/>
+    
+<script type="module">
+import init, * as bindings from '/gulf-shield-2c4ea3938d173ced.js';
+const wasm = await init({ module_or_path: '/gulf-shield-2c4ea3938d173ced_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+<link rel="modulepreload" href="/gulf-shield-2c4ea3938d173ced.js" crossorigin="anonymous" integrity="sha384-l06muJy9TjjIlhQBJbCr9GZu24o72lBzUz4w4qQ1M0ti/6QVsajCNP8UihfwAKnO"><link rel="preload" href="/gulf-shield-2c4ea3938d173ced_bg.wasm" crossorigin="anonymous" integrity="sha384-b257dG7PtErQ0sXIUl8lqhOfIBxxEljUjsHFOonp6gbMQ+sF34mr/JAywMYNHMN+" as="fetch" type="application/wasm"></head>
+<body>
+</body>
+</html>
